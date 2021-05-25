@@ -6,14 +6,14 @@ metadata:
     app: aws-capstone
   namespace: default
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: aws-capstone
   strategy:
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      maxSurge: 50%
+      maxUnavailable: 50%
     type: RollingUpdate
   template:
     metadata:
